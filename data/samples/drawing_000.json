@@ -1,0 +1,607 @@
+{
+ "id": "drawing_000",
+ "lang": "ja",
+ "build_year": 2003,
+ "scan_dpi": 130,
+ "scan_skew_deg": 0.76,
+ "items": [
+  {
+   "text": "工事名: 中央ビル改修工事",
+   "bbox_pt": [
+    806.0,
+    696.14,
+    904.01,
+    707.25
+   ],
+   "kind": "title",
+   "rotated": false,
+   "lang": "ja"
+  },
+  {
+   "text": "図面名: 1階平面図・仕上表",
+   "bbox_pt": [
+    806.0,
+    718.14,
+    908.68,
+    729.25
+   ],
+   "kind": "title",
+   "rotated": false,
+   "lang": "ja"
+  },
+  {
+   "text": "竣工年: 2003年",
+   "bbox_pt": [
+    806.0,
+    740.14,
+    863.2,
+    751.25
+   ],
+   "kind": "title",
+   "rotated": false,
+   "lang": "ja"
+  },
+  {
+   "text": "縮尺 S=1:100   図番 A-118",
+   "bbox_pt": [
+    806.0,
+    762.14,
+    903.09,
+    773.25
+   ],
+   "kind": "title",
+   "rotated": false,
+   "lang": "ja"
+  },
+  {
+   "text": "日付 2019.06.19",
+   "bbox_pt": [
+    806.0,
+    784.14,
+    867.19,
+    795.25
+   ],
+   "kind": "title",
+   "rotated": false,
+   "lang": "ja"
+  },
+  {
+   "text": "会議室",
+   "bbox_pt": [
+    146.23,
+    195.99,
+    173.23,
+    207.76
+   ],
+   "kind": "room",
+   "rotated": false,
+   "lang": "ja"
+  },
+  {
+   "text": "倉庫",
+   "bbox_pt": [
+    384.23,
+    195.99,
+    402.23,
+    207.76
+   ],
+   "kind": "room",
+   "rotated": false,
+   "lang": "ja"
+  },
+  {
+   "text": "湯沸室",
+   "bbox_pt": [
+    146.23,
+    419.99,
+    173.23,
+    431.76
+   ],
+   "kind": "room",
+   "rotated": false,
+   "lang": "ja"
+  },
+  {
+   "text": "更衣室",
+   "bbox_pt": [
+    379.73,
+    419.99,
+    406.73,
+    431.76
+   ],
+   "kind": "room",
+   "rotated": false,
+   "lang": "ja"
+  },
+  {
+   "text": "8100",
+   "bbox_pt": [
+    153.79,
+    56.71,
+    169.19,
+    65.86
+   ],
+   "kind": "dim",
+   "rotated": false,
+   "lang": "en"
+  },
+  {
+   "text": "9900",
+   "bbox_pt": [
+    387.29,
+    56.71,
+    402.69,
+    65.86
+   ],
+   "kind": "dim",
+   "rotated": false,
+   "lang": "en"
+  },
+  {
+   "text": "1階平面図  S=1:100",
+   "bbox_pt": [
+    60.0,
+    559.58,
+    146.1,
+    572.65
+   ],
+   "kind": "title",
+   "rotated": false,
+   "lang": "ja"
+  },
+  {
+   "text": "仕上表",
+   "bbox_pt": [
+    640.0,
+    79.58,
+    670.0,
+    92.65
+   ],
+   "kind": "title",
+   "rotated": false,
+   "lang": "ja"
+  },
+  {
+   "text": "室名",
+   "bbox_pt": [
+    645.0,
+    106.66,
+    661.0,
+    117.12
+   ],
+   "kind": "header",
+   "rotated": false,
+   "lang": "ja"
+  },
+  {
+   "text": "床",
+   "bbox_pt": [
+    709.0,
+    106.66,
+    717.0,
+    117.12
+   ],
+   "kind": "header",
+   "rotated": false,
+   "lang": "ja"
+  },
+  {
+   "text": "巾木",
+   "bbox_pt": [
+    821.0,
+    106.66,
+    837.0,
+    117.12
+   ],
+   "kind": "header",
+   "rotated": false,
+   "lang": "ja"
+  },
+  {
+   "text": "壁",
+   "bbox_pt": [
+    933.0,
+    106.66,
+    941.0,
+    117.12
+   ],
+   "kind": "header",
+   "rotated": false,
+   "lang": "ja"
+  },
+  {
+   "text": "天井",
+   "bbox_pt": [
+    1045.0,
+    106.66,
+    1061.0,
+    117.12
+   ],
+   "kind": "header",
+   "rotated": false,
+   "lang": "ja"
+  },
+  {
+   "text": "書庫",
+   "bbox_pt": [
+    645.0,
+    129.71,
+    659.0,
+    138.85
+   ],
+   "kind": "room",
+   "rotated": false,
+   "lang": "ja"
+  },
+  {
+   "text": "磁器質タイル t=6",
+   "bbox_pt": [
+    709.0,
+    129.71,
+    762.9,
+    138.85
+   ],
+   "kind": "material",
+   "rotated": false,
+   "lang": "ja",
+   "entry_id": "N005",
+   "expected_label": "NON_ASBESTOS"
+  },
+  {
+   "text": "塗装仕上げ t=9.5",
+   "bbox_pt": [
+    821.0,
+    129.71,
+    873.63,
+    138.85
+   ],
+   "kind": "material",
+   "rotated": false,
+   "lang": "ja",
+   "entry_id": "N008",
+   "expected_label": "NON_ASBESTOS"
+  },
+  {
+   "text": "押出成形セメント板 厚12mm",
+   "bbox_pt": [
+    933.0,
+    129.71,
+    1025.04,
+    138.85
+   ],
+   "kind": "material",
+   "rotated": false,
+   "lang": "ja",
+   "entry_id": "A012",
+   "expected_label": "ASBESTOS"
+  },
+  {
+   "text": "グラスウール",
+   "bbox_pt": [
+    1045.0,
+    129.71,
+    1087.0,
+    138.85
+   ],
+   "kind": "material",
+   "rotated": false,
+   "lang": "ja",
+   "entry_id": "N011",
+   "expected_label": "NON_ASBESTOS"
+  },
+  {
+   "text": "湯沸室",
+   "bbox_pt": [
+    645.0,
+    151.71,
+    666.0,
+    160.85
+   ],
+   "kind": "room",
+   "rotated": false,
+   "lang": "ja"
+  },
+  {
+   "text": "モルタル",
+   "bbox_pt": [
+    709.0,
+    151.71,
+    737.0,
+    160.85
+   ],
+   "kind": "material",
+   "rotated": false,
+   "lang": "ja",
+   "entry_id": "N010",
+   "expected_label": "NON_ASBESTOS"
+  },
+  {
+   "text": "エマルションペイント t=6",
+   "bbox_pt": [
+    821.0,
+    151.71,
+    902.9,
+    160.85
+   ],
+   "kind": "material",
+   "rotated": false,
+   "lang": "ja",
+   "entry_id": "N008",
+   "expected_label": "NON_ASBESTOS"
+  },
+  {
+   "text": "石綿含有仕上塗材 t=2",
+   "bbox_pt": [
+    933.0,
+    151.71,
+    1000.9,
+    160.85
+   ],
+   "kind": "material",
+   "rotated": false,
+   "lang": "ja",
+   "entry_id": "A018",
+   "expected_label": "ASBESTOS"
+  },
+  {
+   "text": "ケイカル板2種(ノンアスベスト)",
+   "bbox_pt": [
+    1045.0,
+    151.71,
+    1144.05,
+    160.85
+   ],
+   "kind": "material",
+   "rotated": false,
+   "lang": "ja",
+   "entry_id": "A005",
+   "expected_label": "NON_ASBESTOS"
+  },
+  {
+   "text": "休憩室",
+   "bbox_pt": [
+    645.0,
+    173.71,
+    666.0,
+    182.85
+   ],
+   "kind": "room",
+   "rotated": false,
+   "lang": "ja"
+  },
+  {
+   "text": "モルタル t=6",
+   "bbox_pt": [
+    709.0,
+    173.71,
+    748.9,
+    182.85
+   ],
+   "kind": "material",
+   "rotated": false,
+   "lang": "ja",
+   "entry_id": "N010",
+   "expected_label": "NON_ASBESTOS"
+  },
+  {
+   "text": "モルタル(ノンアスベスト) t=9.5",
+   "bbox_pt": [
+    821.0,
+    173.71,
+    919.83,
+    182.85
+   ],
+   "kind": "material",
+   "rotated": false,
+   "lang": "ja",
+   "entry_id": "N010",
+   "expected_label": "NON_ASBESTOS"
+  },
+  {
+   "text": "普通コンクリート t=2",
+   "bbox_pt": [
+    933.0,
+    173.71,
+    1000.9,
+    182.85
+   ],
+   "kind": "material",
+   "rotated": false,
+   "lang": "ja",
+   "entry_id": "N001",
+   "expected_label": "NON_ASBESTOS"
+  },
+  {
+   "text": "GW",
+   "bbox_pt": [
+    1045.0,
+    173.71,
+    1056.01,
+    182.85
+   ],
+   "kind": "material",
+   "rotated": false,
+   "lang": "en",
+   "entry_id": "N011",
+   "expected_label": "NON_ASBESTOS"
+  },
+  {
+   "text": "事務室",
+   "bbox_pt": [
+    645.0,
+    195.71,
+    666.0,
+    204.85
+   ],
+   "kind": "room",
+   "rotated": false,
+   "lang": "ja"
+  },
+  {
+   "text": "ビニル床シート t=9.5",
+   "bbox_pt": [
+    709.0,
+    195.71,
+    775.63,
+    204.85
+   ],
+   "kind": "material",
+   "rotated": false,
+   "lang": "ja",
+   "entry_id": "A017",
+   "expected_label": "NON_ASBESTOS"
+  },
+  {
+   "text": "VAT",
+   "bbox_pt": [
+    821.0,
+    195.71,
+    832.86,
+    204.85
+   ],
+   "kind": "material",
+   "rotated": false,
+   "lang": "en",
+   "entry_id": "A016",
+   "expected_label": "NON_ASBESTOS"
+  },
+  {
+   "text": "ECP",
+   "bbox_pt": [
+    933.0,
+    195.71,
+    944.94,
+    204.85
+   ],
+   "kind": "material",
+   "rotated": false,
+   "lang": "en",
+   "entry_id": "A012",
+   "expected_label": "ASBESTOS"
+  },
+  {
+   "text": "吹付け石綿 厚12mm",
+   "bbox_pt": [
+    1045.0,
+    195.71,
+    1109.04,
+    204.85
+   ],
+   "kind": "material",
+   "rotated": false,
+   "lang": "ja",
+   "entry_id": "A001",
+   "expected_label": "ASBESTOS"
+  },
+  {
+   "text": "天井:フレキシブルボード 厚12mm",
+   "bbox_pt": [
+    460.1,
+    259.62,
+    469.9,
+    375.25
+   ],
+   "kind": "material",
+   "rotated": true,
+   "lang": "ja",
+   "entry_id": "A008",
+   "expected_label": "ASBESTOS"
+  },
+  {
+   "text": "煙突用石綿断熱材",
+   "bbox_pt": [
+    200.85,
+    419.35,
+    260.85,
+    429.15
+   ],
+   "kind": "material",
+   "rotated": false,
+   "lang": "ja",
+   "entry_id": "A006",
+   "expected_label": "ASBESTOS"
+  },
+  {
+   "text": "天井:フレキシブル板 t=12.5",
+   "bbox_pt": [
+    316.08,
+    278.92,
+    325.88,
+    371.46
+   ],
+   "kind": "material",
+   "rotated": true,
+   "lang": "ja",
+   "entry_id": "A008",
+   "expected_label": "ASBESTOS"
+  },
+  {
+   "text": "石綿セメント管 t=2",
+   "bbox_pt": [
+    80.63,
+    144.35,
+    145.88,
+    154.15
+   ],
+   "kind": "material",
+   "rotated": false,
+   "lang": "ja",
+   "entry_id": "A021",
+   "expected_label": "ASBESTOS"
+  },
+  {
+   "text": "特記事項",
+   "bbox_pt": [
+    60.0,
+    590.62,
+    96.0,
+    602.39
+   ],
+   "kind": "title",
+   "rotated": false,
+   "lang": "ja"
+  },
+  {
+   "text": "1. 外壁：ECP",
+   "bbox_pt": [
+    68.0,
+    613.66,
+    114.29,
+    624.12
+   ],
+   "kind": "material",
+   "rotated": false,
+   "lang": "ja",
+   "entry_id": "A012",
+   "expected_label": "ASBESTOS"
+  },
+  {
+   "text": "2. 外壁：押出成形セメント板 2.0mm",
+   "bbox_pt": [
+    68.0,
+    631.66,
+    199.98,
+    642.12
+   ],
+   "kind": "material",
+   "rotated": false,
+   "lang": "ja",
+   "entry_id": "A012",
+   "expected_label": "ASBESTOS"
+  },
+  {
+   "text": "3. 屋根：石綿含有コロニアル",
+   "bbox_pt": [
+    68.0,
+    649.66,
+    172.64,
+    660.12
+   ],
+   "kind": "material",
+   "rotated": false,
+   "lang": "ja",
+   "entry_id": "A010",
+   "expected_label": "ASBESTOS"
+  }
+ ]
+}

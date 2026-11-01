@@ -1,0 +1,643 @@
+{
+ "id": "drawing_001",
+ "lang": "en",
+ "build_year": 1971,
+ "scan_dpi": 180,
+ "scan_skew_deg": -0.329,
+ "items": [
+  {
+   "text": "Project: Central Building Renovation",
+   "bbox_pt": [
+    806.0,
+    696.14,
+    943.61,
+    707.25
+   ],
+   "kind": "title",
+   "rotated": false,
+   "lang": "en"
+  },
+  {
+   "text": "Drawing: 1F Plan and Finish Schedule",
+   "bbox_pt": [
+    806.0,
+    718.14,
+    948.03,
+    729.25
+   ],
+   "kind": "title",
+   "rotated": false,
+   "lang": "en"
+  },
+  {
+   "text": "竣工: 昭和46年",
+   "bbox_pt": [
+    806.0,
+    740.14,
+    862.35,
+    751.25
+   ],
+   "kind": "title",
+   "rotated": false,
+   "lang": "ja"
+  },
+  {
+   "text": "縮尺 S=1:200   図番 A-108",
+   "bbox_pt": [
+    806.0,
+    762.14,
+    903.09,
+    773.25
+   ],
+   "kind": "title",
+   "rotated": false,
+   "lang": "ja"
+  },
+  {
+   "text": "日付 2023.04.26",
+   "bbox_pt": [
+    806.0,
+    784.14,
+    867.19,
+    795.25
+   ],
+   "kind": "title",
+   "rotated": false,
+   "lang": "ja"
+  },
+  {
+   "text": "Toilet",
+   "bbox_pt": [
+    128.14,
+    197.23,
+    150.51,
+    208.99
+   ],
+   "kind": "room",
+   "rotated": false,
+   "lang": "en"
+  },
+  {
+   "text": "Office",
+   "bbox_pt": [
+    286.24,
+    197.23,
+    310.13,
+    208.99
+   ],
+   "kind": "room",
+   "rotated": false,
+   "lang": "en"
+  },
+  {
+   "text": "Electrical Room",
+   "bbox_pt": [
+    427.23,
+    197.23,
+    489.59,
+    208.99
+   ],
+   "kind": "room",
+   "rotated": false,
+   "lang": "en"
+  },
+  {
+   "text": "Machine Room",
+   "bbox_pt": [
+    111.5,
+    418.23,
+    172.12,
+    429.99
+   ],
+   "kind": "room",
+   "rotated": false,
+   "lang": "en"
+  },
+  {
+   "text": "Reception",
+   "bbox_pt": [
+    278.3,
+    418.23,
+    318.54,
+    429.99
+   ],
+   "kind": "room",
+   "rotated": false,
+   "lang": "en"
+  },
+  {
+   "text": "Corridor",
+   "bbox_pt": [
+    439.13,
+    418.23,
+    473.26,
+    429.99
+   ],
+   "kind": "room",
+   "rotated": false,
+   "lang": "en"
+  },
+  {
+   "text": "5700",
+   "bbox_pt": [
+    136.37,
+    56.71,
+    151.77,
+    65.86
+   ],
+   "kind": "dim",
+   "rotated": false,
+   "lang": "en"
+  },
+  {
+   "text": "4200",
+   "bbox_pt": [
+    294.35,
+    56.71,
+    309.75,
+    65.86
+   ],
+   "kind": "dim",
+   "rotated": false,
+   "lang": "en"
+  },
+  {
+   "text": "5100",
+   "bbox_pt": [
+    452.98,
+    56.71,
+    468.38,
+    65.86
+   ],
+   "kind": "dim",
+   "rotated": false,
+   "lang": "en"
+  },
+  {
+   "text": "1F PLAN  S=1:100",
+   "bbox_pt": [
+    60.0,
+    559.58,
+    137.72,
+    572.65
+   ],
+   "kind": "title",
+   "rotated": false,
+   "lang": "en"
+  },
+  {
+   "text": "FINISH SCHEDULE",
+   "bbox_pt": [
+    640.0,
+    79.58,
+    721.34,
+    92.65
+   ],
+   "kind": "title",
+   "rotated": false,
+   "lang": "en"
+  },
+  {
+   "text": "Room",
+   "bbox_pt": [
+    645.0,
+    106.66,
+    666.11,
+    117.12
+   ],
+   "kind": "header",
+   "rotated": false,
+   "lang": "en"
+  },
+  {
+   "text": "Floor",
+   "bbox_pt": [
+    709.0,
+    106.66,
+    727.42,
+    117.12
+   ],
+   "kind": "header",
+   "rotated": false,
+   "lang": "en"
+  },
+  {
+   "text": "Base",
+   "bbox_pt": [
+    821.0,
+    106.66,
+    838.12,
+    117.12
+   ],
+   "kind": "header",
+   "rotated": false,
+   "lang": "en"
+  },
+  {
+   "text": "Wall",
+   "bbox_pt": [
+    933.0,
+    106.66,
+    948.42,
+    117.12
+   ],
+   "kind": "header",
+   "rotated": false,
+   "lang": "en"
+  },
+  {
+   "text": "Ceiling",
+   "bbox_pt": [
+    1045.0,
+    106.66,
+    1069.12,
+    117.12
+   ],
+   "kind": "header",
+   "rotated": false,
+   "lang": "en"
+  },
+  {
+   "text": "Storage",
+   "bbox_pt": [
+    645.0,
+    129.71,
+    668.93,
+    138.85
+   ],
+   "kind": "room",
+   "rotated": false,
+   "lang": "en"
+  },
+  {
+   "text": "ceramic tile t=12.5",
+   "bbox_pt": [
+    709.0,
+    129.71,
+    766.83,
+    138.85
+   ],
+   "kind": "material",
+   "rotated": false,
+   "lang": "en",
+   "entry_id": "N005",
+   "expected_label": "NON_ASBESTOS"
+  },
+  {
+   "text": "cement mortar t=9.5",
+   "bbox_pt": [
+    821.0,
+    129.71,
+    885.92,
+    138.85
+   ],
+   "kind": "material",
+   "rotated": false,
+   "lang": "en",
+   "entry_id": "N010",
+   "expected_label": "NON_ASBESTOS"
+  },
+  {
+   "text": "calcium silicate board",
+   "bbox_pt": [
+    933.0,
+    129.71,
+    1001.24,
+    138.85
+   ],
+   "kind": "material",
+   "rotated": false,
+   "lang": "en",
+   "entry_id": "A007",
+   "expected_label": "ASBESTOS"
+  },
+  {
+   "text": "calcium silicate board",
+   "bbox_pt": [
+    1045.0,
+    129.71,
+    1113.24,
+    138.85
+   ],
+   "kind": "material",
+   "rotated": false,
+   "lang": "en",
+   "entry_id": "A007",
+   "expected_label": "ASBESTOS"
+  },
+  {
+   "text": "Reception",
+   "bbox_pt": [
+    645.0,
+    151.71,
+    676.3,
+    160.85
+   ],
+   "kind": "room",
+   "rotated": false,
+   "lang": "en"
+  },
+  {
+   "text": "exposed concrete t=9.5",
+   "bbox_pt": [
+    709.0,
+    151.71,
+    782.17,
+    160.85
+   ],
+   "kind": "material",
+   "rotated": false,
+   "lang": "en",
+   "entry_id": "N001",
+   "expected_label": "NON_ASBESTOS"
+  },
+  {
+   "text": "cushion floor t=2",
+   "bbox_pt": [
+    821.0,
+    151.71,
+    874.33,
+    160.85
+   ],
+   "kind": "material",
+   "rotated": false,
+   "lang": "en",
+   "entry_id": "A017",
+   "expected_label": "ASBESTOS"
+  },
+  {
+   "text": "RC 12mm",
+   "bbox_pt": [
+    933.0,
+    151.71,
+    963.37,
+    160.85
+   ],
+   "kind": "material",
+   "rotated": false,
+   "lang": "en",
+   "entry_id": "N001",
+   "expected_label": "NON_ASBESTOS"
+  },
+  {
+   "text": "glass wool",
+   "bbox_pt": [
+    1045.0,
+    151.71,
+    1077.43,
+    160.85
+   ],
+   "kind": "material",
+   "rotated": false,
+   "lang": "en",
+   "entry_id": "N011",
+   "expected_label": "NON_ASBESTOS"
+  },
+  {
+   "text": "Pantry",
+   "bbox_pt": [
+    645.0,
+    173.71,
+    665.46,
+    182.85
+   ],
+   "kind": "room",
+   "rotated": false,
+   "lang": "en"
+  },
+  {
+   "text": "Floor tile adhesive",
+   "bbox_pt": [
+    709.0,
+    173.71,
+    766.25,
+    182.85
+   ],
+   "kind": "material",
+   "rotated": false,
+   "lang": "en",
+   "entry_id": "A020",
+   "expected_label": "ASBESTOS"
+  },
+  {
+   "text": "plywood",
+   "bbox_pt": [
+    821.0,
+    173.71,
+    847.72,
+    182.85
+   ],
+   "kind": "material",
+   "rotated": false,
+   "lang": "en",
+   "entry_id": "N002",
+   "expected_label": "NON_ASBESTOS"
+  },
+  {
+   "text": "fiber cement board",
+   "bbox_pt": [
+    933.0,
+    173.71,
+    993.61,
+    182.85
+   ],
+   "kind": "material",
+   "rotated": false,
+   "lang": "en",
+   "entry_id": "A008",
+   "expected_label": "ASBESTOS"
+  },
+  {
+   "text": "Calcium silicate board type 1",
+   "bbox_pt": [
+    1045.0,
+    173.71,
+    1135.33,
+    182.85
+   ],
+   "kind": "material",
+   "rotated": false,
+   "lang": "en",
+   "entry_id": "A007",
+   "expected_label": "ASBESTOS"
+  },
+  {
+   "text": "Toilet",
+   "bbox_pt": [
+    645.0,
+    195.71,
+    662.4,
+    204.85
+   ],
+   "kind": "room",
+   "rotated": false,
+   "lang": "en"
+  },
+  {
+   "text": "vinyl floor tile",
+   "bbox_pt": [
+    709.0,
+    195.71,
+    751.84,
+    204.85
+   ],
+   "kind": "material",
+   "rotated": false,
+   "lang": "en",
+   "entry_id": "A016",
+   "expected_label": "ASBESTOS"
+  },
+  {
+   "text": "Vinyl floor tile t=9.5",
+   "bbox_pt": [
+    821.0,
+    195.71,
+    882.08,
+    204.85
+   ],
+   "kind": "material",
+   "rotated": false,
+   "lang": "en",
+   "entry_id": "A016",
+   "expected_label": "ASBESTOS"
+  },
+  {
+   "text": "exposed concrete t=9.5",
+   "bbox_pt": [
+    933.0,
+    195.71,
+    1006.17,
+    204.85
+   ],
+   "kind": "material",
+   "rotated": false,
+   "lang": "en",
+   "entry_id": "N001",
+   "expected_label": "NON_ASBESTOS"
+  },
+  {
+   "text": "calcium silicate board type 2",
+   "bbox_pt": [
+    1045.0,
+    195.71,
+    1134.37,
+    204.85
+   ],
+   "kind": "material",
+   "rotated": false,
+   "lang": "en",
+   "entry_id": "A005",
+   "expected_label": "ASBESTOS"
+  },
+  {
+   "text": "Ceiling: fireproof cladding board 12mm",
+   "bbox_pt": [
+    341.73,
+    295.54,
+    474.22,
+    305.34
+   ],
+   "kind": "material",
+   "rotated": false,
+   "lang": "en",
+   "entry_id": "A005",
+   "expected_label": "ASBESTOS"
+  },
+  {
+   "text": "Ceiling: calcium silicate board t=9.5",
+   "bbox_pt": [
+    290.09,
+    145.83,
+    408.68,
+    155.64
+   ],
+   "kind": "material",
+   "rotated": false,
+   "lang": "en",
+   "entry_id": "A007",
+   "expected_label": "ASBESTOS"
+  },
+  {
+   "text": "Wall: fiber cement board t=2",
+   "bbox_pt": [
+    281.82,
+    121.11,
+    377.94,
+    130.91
+   ],
+   "kind": "material",
+   "rotated": false,
+   "lang": "en",
+   "entry_id": "A008",
+   "expected_label": "ASBESTOS"
+  },
+  {
+   "text": "Ceiling: rock wool acoustic board",
+   "bbox_pt": [
+    84.33,
+    501.46,
+    195.15,
+    511.26
+   ],
+   "kind": "material",
+   "rotated": false,
+   "lang": "en",
+   "entry_id": "A014",
+   "expected_label": "ASBESTOS"
+  },
+  {
+   "text": "Ceiling: Flexible cement board",
+   "bbox_pt": [
+    397.02,
+    345.8,
+    498.41,
+    355.61
+   ],
+   "kind": "material",
+   "rotated": false,
+   "lang": "en",
+   "entry_id": "A008",
+   "expected_label": "ASBESTOS"
+  },
+  {
+   "text": "GENERAL NOTES",
+   "bbox_pt": [
+    60.0,
+    590.62,
+    127.17,
+    602.39
+   ],
+   "kind": "title",
+   "rotated": false,
+   "lang": "en"
+  },
+  {
+   "text": "1. Ext Wall: Asbestos-containing ECP 12mm",
+   "bbox_pt": [
+    68.0,
+    613.66,
+    222.54,
+    624.12
+   ],
+   "kind": "material",
+   "rotated": false,
+   "lang": "en",
+   "entry_id": "A012",
+   "expected_label": "ASBESTOS"
+  },
+  {
+   "text": "2. Roof: corrugated slate t=2",
+   "bbox_pt": [
+    68.0,
+    631.66,
+    169.56,
+    642.12
+   ],
+   "kind": "material",
+   "rotated": false,
+   "lang": "en",
+   "entry_id": "A009",
+   "expected_label": "ASBESTOS"
+  }
+ ]
+}

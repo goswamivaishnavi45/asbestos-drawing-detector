@@ -1,0 +1,35 @@
+id,name_en,name_ja,aliases,category,status,start_year,end_year,notes
+A001,Sprayed asbestos,吹付け石綿,吹付けアスベスト|石綿吹付け|sprayed asbestos insulation,Level 1 sprayed,asbestos,1956,1975,Asbestos by definition
+A002,Asbestos-containing sprayed rock wool,石綿含有吹付けロックウール,吹付けロックウール|吹付けRW|sprayed rock wool,Level 1 sprayed,possible,1961,1987,Asbestos-containing grades produced in this period
+A003,Asbestos-containing sprayed vermiculite,石綿含有吹付けバーミキュライト,吹付けバーミキュライト|ひる石吹付け|sprayed vermiculite,Level 1 sprayed,possible,1960,1988,
+A004,Asbestos pipe insulation,石綿保温材,配管保温材|石綿保温筒|asbestos lagging|pipe lagging,Level 2 insulation,asbestos,1914,1980,Asbestos by definition
+A005,Calcium silicate fireproof cladding board,けい酸カルシウム板第2種,ケイカル板2種|けいカル板第2種|耐火被覆板|calcium silicate board type 2|fireproof cladding board,Level 2 fireproofing,possible,1963,1997,
+A006,Chimney asbestos insulation,煙突用石綿断熱材,煙突断熱材|カポスタック|chimney insulation,Level 2 insulation,possible,1963,2004,
+A007,Calcium silicate board type 1,けい酸カルシウム板第1種,ケイカル板|けいカル板|ケイカル板1種|calcium silicate board|cal-sil board,Level 3 board,possible,1960,2004,
+A008,Flexible cement board,フレキシブルボード,フレキ板|フレキシブル板|スレートボード|flexible board|fiber cement board,Level 3 board,possible,1952,2004,
+A009,Corrugated cement slate,スレート波板,波形スレート|大波スレート|小波スレート|corrugated slate|corrugated asbestos cement sheet,Level 3 board,possible,1931,2004,
+A010,Roofing slate,住宅屋根用化粧スレート,化粧スレート|カラーベスト|コロニアル|roofing slate|cement roof slate,Level 3 board,possible,1961,2004,
+A011,Fiber cement siding,窯業系サイディング,サイディング|窯業サイディング|fiber cement siding,Level 3 board,possible,1960,2004,
+A012,Extruded cement panel,押出成形セメント板,ECP|押出成形板|extruded cement panel,Level 3 board,possible,1970,2004,
+A013,Pulp cement board,パルプセメント板,パルプセメントボード|pulp cement board,Level 3 board,possible,1958,2004,
+A014,Rock wool acoustic ceiling board,ロックウール吸音天井板,岩綿吸音板|ロックウール化粧吸音板|吸音天井板|rock wool acoustic board|mineral fiber ceiling tile,Level 3 board,possible,1961,1987,
+A015,Gypsum board,せっこうボード,石膏ボード|プラスターボード|PB|GB-R|gypsum board|plasterboard,Level 3 board,possible,1970,1986,Only some gypsum boards from this period contained asbestos
+A016,Vinyl floor tile,ビニル床タイル,ビニール床タイル|Pタイル|ピータイル|VAT|vinyl floor tile|vinyl asbestos tile,Level 3 floor,possible,1952,1987,
+A017,Vinyl sheet flooring,ビニル床シート,クッションフロア|CFシート|長尺シート|vinyl sheet flooring|cushion floor,Level 3 floor,possible,1951,1990,
+A018,Asbestos-containing finish coating,石綿含有仕上塗材,吹付けタイル|リシン吹付け|仕上塗材|textured coating|spray texture finish,Level 3 coating,possible,1960,1989,
+A019,Asbestos-containing sealant,石綿含有シーリング材,シーリング材|asbestos sealant|caulking,Level 3 other,possible,1960,1995,
+A020,Floor tile adhesive,床タイル用接着剤,ビニル床用接着剤|floor tile adhesive|mastic,Level 3 other,possible,1960,1987,
+A021,Asbestos cement pipe,石綿セメント管,石綿管|水綿管|asbestos cement pipe|transite pipe,Level 3 other,asbestos,1931,1985,Asbestos by definition
+A022,Asbestos gasket,石綿ジョイントシート,ジョイントシート|石綿ガスケット|asbestos gasket,Level 3 other,asbestos,1937,2006,Asbestos by definition
+N001,Concrete,コンクリート,RC|普通コンクリート|reinforced concrete|exposed concrete,non-asbestos,none,,,
+N002,Plywood,合板,ラワン合板|構造用合板|plywood,non-asbestos,none,,,
+N003,Glass,ガラス,フロートガラス|網入りガラス|float glass|wired glass,non-asbestos,none,,,
+N004,Steel plate,鋼板,スチール|ガルバリウム鋼板|steel plate|steel sheet,non-asbestos,none,,,
+N005,Ceramic tile,磁器質タイル,タイル張り|ceramic tile|porcelain tile,non-asbestos,none,,,
+N006,Timber flooring,フローリング,木質フローリング|複合フローリング|timber flooring|wood flooring,non-asbestos,none,,,
+N007,Carpet tile,タイルカーペット,カーペット|carpet tile|carpet,non-asbestos,none,,,
+N008,Paint finish,EP塗装,AEP|エマルションペイント|塗装仕上げ|emulsion paint|paint finish,non-asbestos,none,,,
+N009,Vinyl wallcovering,ビニルクロス,クロス張り|ビニル壁紙|vinyl wallpaper|wallcovering,non-asbestos,none,,,
+N010,Mortar,モルタル,モルタル金ゴテ|mortar|cement mortar,non-asbestos,none,,,
+N011,Glass wool insulation,グラスウール,GW|グラスウール断熱材|glass wool|fiberglass insulation,non-asbestos,none,,,
+N012,Aluminium panel,アルミパネル,アルミスパンドレル|aluminium panel|aluminum spandrel,non-asbestos,none,,,

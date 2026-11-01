@@ -1,0 +1,757 @@
+{
+ "id": "drawing_002",
+ "lang": "ja",
+ "build_year": 1965,
+ "scan_dpi": 150,
+ "scan_skew_deg": 0.624,
+ "items": [
+  {
+   "text": "工事名: 駅前ビル改修工事",
+   "bbox_pt": [
+    806.0,
+    696.14,
+    904.01,
+    707.25
+   ],
+   "kind": "title",
+   "rotated": false,
+   "lang": "ja"
+  },
+  {
+   "text": "図面名: 1階平面図・仕上表",
+   "bbox_pt": [
+    806.0,
+    718.14,
+    908.68,
+    729.25
+   ],
+   "kind": "title",
+   "rotated": false,
+   "lang": "ja"
+  },
+  {
+   "text": "竣工: 昭和40年",
+   "bbox_pt": [
+    806.0,
+    740.14,
+    862.35,
+    751.25
+   ],
+   "kind": "title",
+   "rotated": false,
+   "lang": "ja"
+  },
+  {
+   "text": "縮尺 S=1:200   図番 A-110",
+   "bbox_pt": [
+    806.0,
+    762.14,
+    903.09,
+    773.25
+   ],
+   "kind": "title",
+   "rotated": false,
+   "lang": "ja"
+  },
+  {
+   "text": "日付 2023.04.10",
+   "bbox_pt": [
+    806.0,
+    784.14,
+    867.19,
+    795.25
+   ],
+   "kind": "title",
+   "rotated": false,
+   "lang": "ja"
+  },
+  {
+   "text": "機械室",
+   "bbox_pt": [
+    164.57,
+    201.01,
+    191.57,
+    212.77
+   ],
+   "kind": "room",
+   "rotated": false,
+   "lang": "ja"
+  },
+  {
+   "text": "事務室",
+   "bbox_pt": [
+    423.07,
+    201.01,
+    450.07,
+    212.77
+   ],
+   "kind": "room",
+   "rotated": false,
+   "lang": "ja"
+  },
+  {
+   "text": "電気室",
+   "bbox_pt": [
+    164.57,
+    412.01,
+    191.57,
+    423.77
+   ],
+   "kind": "room",
+   "rotated": false,
+   "lang": "ja"
+  },
+  {
+   "text": "書庫",
+   "bbox_pt": [
+    427.57,
+    412.01,
+    445.57,
+    423.77
+   ],
+   "kind": "room",
+   "rotated": false,
+   "lang": "ja"
+  },
+  {
+   "text": "7800",
+   "bbox_pt": [
+    172.13,
+    56.71,
+    187.53,
+    65.86
+   ],
+   "kind": "dim",
+   "rotated": false,
+   "lang": "en"
+  },
+  {
+   "text": "7500",
+   "bbox_pt": [
+    430.63,
+    56.71,
+    446.03,
+    65.86
+   ],
+   "kind": "dim",
+   "rotated": false,
+   "lang": "en"
+  },
+  {
+   "text": "1階平面図  S=1:100",
+   "bbox_pt": [
+    60.0,
+    559.58,
+    146.1,
+    572.65
+   ],
+   "kind": "title",
+   "rotated": false,
+   "lang": "ja"
+  },
+  {
+   "text": "仕上表",
+   "bbox_pt": [
+    640.0,
+    79.58,
+    670.0,
+    92.65
+   ],
+   "kind": "title",
+   "rotated": false,
+   "lang": "ja"
+  },
+  {
+   "text": "室名",
+   "bbox_pt": [
+    645.0,
+    106.66,
+    661.0,
+    117.12
+   ],
+   "kind": "header",
+   "rotated": false,
+   "lang": "ja"
+  },
+  {
+   "text": "床",
+   "bbox_pt": [
+    709.0,
+    106.66,
+    717.0,
+    117.12
+   ],
+   "kind": "header",
+   "rotated": false,
+   "lang": "ja"
+  },
+  {
+   "text": "巾木",
+   "bbox_pt": [
+    821.0,
+    106.66,
+    837.0,
+    117.12
+   ],
+   "kind": "header",
+   "rotated": false,
+   "lang": "ja"
+  },
+  {
+   "text": "壁",
+   "bbox_pt": [
+    933.0,
+    106.66,
+    941.0,
+    117.12
+   ],
+   "kind": "header",
+   "rotated": false,
+   "lang": "ja"
+  },
+  {
+   "text": "天井",
+   "bbox_pt": [
+    1045.0,
+    106.66,
+    1061.0,
+    117.12
+   ],
+   "kind": "header",
+   "rotated": false,
+   "lang": "ja"
+  },
+  {
+   "text": "電気室",
+   "bbox_pt": [
+    645.0,
+    129.71,
+    666.0,
+    138.85
+   ],
+   "kind": "room",
+   "rotated": false,
+   "lang": "ja"
+  },
+  {
+   "text": "フローリング t=2",
+   "bbox_pt": [
+    709.0,
+    129.71,
+    762.9,
+    138.85
+   ],
+   "kind": "material",
+   "rotated": false,
+   "lang": "ja",
+   "entry_id": "N006",
+   "expected_label": "NON_ASBESTOS"
+  },
+  {
+   "text": "ビニル床シート t=12.5",
+   "bbox_pt": [
+    821.0,
+    129.71,
+    891.48,
+    138.85
+   ],
+   "kind": "material",
+   "rotated": false,
+   "lang": "ja",
+   "entry_id": "A017",
+   "expected_label": "ASBESTOS"
+  },
+  {
+   "text": "普通コンクリート 2.0mm",
+   "bbox_pt": [
+    933.0,
+    129.71,
+    1012.93,
+    138.85
+   ],
+   "kind": "material",
+   "rotated": false,
+   "lang": "ja",
+   "entry_id": "N001",
+   "expected_label": "NON_ASBESTOS"
+  },
+  {
+   "text": "ロックウール化粧吸音板 t=12.5",
+   "bbox_pt": [
+    1045.0,
+    129.71,
+    1143.48,
+    138.85
+   ],
+   "kind": "material",
+   "rotated": false,
+   "lang": "ja",
+   "entry_id": "A014",
+   "expected_label": "ASBESTOS"
+  },
+  {
+   "text": "休憩室",
+   "bbox_pt": [
+    645.0,
+    151.71,
+    666.0,
+    160.85
+   ],
+   "kind": "room",
+   "rotated": false,
+   "lang": "ja"
+  },
+  {
+   "text": "木質フローリング",
+   "bbox_pt": [
+    709.0,
+    151.71,
+    765.0,
+    160.85
+   ],
+   "kind": "material",
+   "rotated": false,
+   "lang": "ja",
+   "entry_id": "N006",
+   "expected_label": "NON_ASBESTOS"
+  },
+  {
+   "text": "EP塗装(ノンアスベスト) 2.0mm",
+   "bbox_pt": [
+    821.0,
+    151.71,
+    919.86,
+    160.85
+   ],
+   "kind": "material",
+   "rotated": false,
+   "lang": "ja",
+   "entry_id": "N008",
+   "expected_label": "NON_ASBESTOS"
+  },
+  {
+   "text": "吹付けタイル t=9.5",
+   "bbox_pt": [
+    933.0,
+    151.71,
+    992.63,
+    160.85
+   ],
+   "kind": "material",
+   "rotated": false,
+   "lang": "ja",
+   "entry_id": "A018",
+   "expected_label": "ASBESTOS"
+  },
+  {
+   "text": "ケイカル板2種",
+   "bbox_pt": [
+    1045.0,
+    151.71,
+    1090.85,
+    160.85
+   ],
+   "kind": "material",
+   "rotated": false,
+   "lang": "ja",
+   "entry_id": "A005",
+   "expected_label": "ASBESTOS"
+  },
+  {
+   "text": "受付",
+   "bbox_pt": [
+    645.0,
+    173.71,
+    659.0,
+    182.85
+   ],
+   "kind": "room",
+   "rotated": false,
+   "lang": "ja"
+  },
+  {
+   "text": "ビニル床タイル t=25",
+   "bbox_pt": [
+    709.0,
+    173.71,
+    773.75,
+    182.85
+   ],
+   "kind": "material",
+   "rotated": false,
+   "lang": "ja",
+   "entry_id": "A016",
+   "expected_label": "ASBESTOS"
+  },
+  {
+   "text": "合板 2.0mm",
+   "bbox_pt": [
+    821.0,
+    173.71,
+    858.93,
+    182.85
+   ],
+   "kind": "material",
+   "rotated": false,
+   "lang": "ja",
+   "entry_id": "N002",
+   "expected_label": "NON_ASBESTOS"
+  },
+  {
+   "text": "石綿含有押出成形セメント板",
+   "bbox_pt": [
+    933.0,
+    173.71,
+    1024.0,
+    182.85
+   ],
+   "kind": "material",
+   "rotated": false,
+   "lang": "ja",
+   "entry_id": "A012",
+   "expected_label": "ASBESTOS"
+  },
+  {
+   "text": "ケイカル板1種",
+   "bbox_pt": [
+    1045.0,
+    173.71,
+    1090.85,
+    182.85
+   ],
+   "kind": "material",
+   "rotated": false,
+   "lang": "ja",
+   "entry_id": "A007",
+   "expected_label": "ASBESTOS"
+  },
+  {
+   "text": "更衣室",
+   "bbox_pt": [
+    645.0,
+    195.71,
+    666.0,
+    204.85
+   ],
+   "kind": "room",
+   "rotated": false,
+   "lang": "ja"
+  },
+  {
+   "text": "床タイル用接着剤 t=12.5",
+   "bbox_pt": [
+    709.0,
+    195.71,
+    786.48,
+    204.85
+   ],
+   "kind": "material",
+   "rotated": false,
+   "lang": "ja",
+   "entry_id": "A020",
+   "expected_label": "ASBESTOS"
+  },
+  {
+   "text": "構造用合板",
+   "bbox_pt": [
+    821.0,
+    195.71,
+    856.0,
+    204.85
+   ],
+   "kind": "material",
+   "rotated": false,
+   "lang": "ja",
+   "entry_id": "N002",
+   "expected_label": "NON_ASBESTOS"
+  },
+  {
+   "text": "スレートボード t=12.5",
+   "bbox_pt": [
+    933.0,
+    195.71,
+    1003.48,
+    204.85
+   ],
+   "kind": "material",
+   "rotated": false,
+   "lang": "ja",
+   "entry_id": "A008",
+   "expected_label": "ASBESTOS"
+  },
+  {
+   "text": "グラスウール t=12.5",
+   "bbox_pt": [
+    1045.0,
+    195.71,
+    1108.48,
+    204.85
+   ],
+   "kind": "material",
+   "rotated": false,
+   "lang": "ja",
+   "entry_id": "N011",
+   "expected_label": "NON_ASBESTOS"
+  },
+  {
+   "text": "湯沸室",
+   "bbox_pt": [
+    645.0,
+    217.71,
+    666.0,
+    226.85
+   ],
+   "kind": "room",
+   "rotated": false,
+   "lang": "ja"
+  },
+  {
+   "text": "ビニル床用接着剤",
+   "bbox_pt": [
+    709.0,
+    217.71,
+    765.0,
+    226.85
+   ],
+   "kind": "material",
+   "rotated": false,
+   "lang": "ja",
+   "entry_id": "A020",
+   "expected_label": "ASBESTOS"
+  },
+  {
+   "text": "合板",
+   "bbox_pt": [
+    821.0,
+    217.71,
+    835.0,
+    226.85
+   ],
+   "kind": "material",
+   "rotated": false,
+   "lang": "ja",
+   "entry_id": "N002",
+   "expected_label": "NON_ASBESTOS"
+  },
+  {
+   "text": "リシン吹付け t=9.5",
+   "bbox_pt": [
+    933.0,
+    217.71,
+    992.63,
+    226.85
+   ],
+   "kind": "material",
+   "rotated": false,
+   "lang": "ja",
+   "entry_id": "A018",
+   "expected_label": "ASBESTOS"
+  },
+  {
+   "text": "AEP",
+   "bbox_pt": [
+    1045.0,
+    217.71,
+    1057.0,
+    226.85
+   ],
+   "kind": "material",
+   "rotated": false,
+   "lang": "en",
+   "entry_id": "N008",
+   "expected_label": "NON_ASBESTOS"
+  },
+  {
+   "text": "機械室",
+   "bbox_pt": [
+    645.0,
+    239.71,
+    666.0,
+    248.85
+   ],
+   "kind": "room",
+   "rotated": false,
+   "lang": "ja"
+  },
+  {
+   "text": "タイル張り 厚12mm",
+   "bbox_pt": [
+    709.0,
+    239.71,
+    773.04,
+    248.85
+   ],
+   "kind": "material",
+   "rotated": false,
+   "lang": "ja",
+   "entry_id": "N005",
+   "expected_label": "NON_ASBESTOS"
+  },
+  {
+   "text": "モルタル t=9.5",
+   "bbox_pt": [
+    821.0,
+    239.71,
+    866.63,
+    248.85
+   ],
+   "kind": "material",
+   "rotated": false,
+   "lang": "ja",
+   "entry_id": "N010",
+   "expected_label": "NON_ASBESTOS"
+  },
+  {
+   "text": "ラワン合板",
+   "bbox_pt": [
+    933.0,
+    239.71,
+    968.0,
+    248.85
+   ],
+   "kind": "material",
+   "rotated": false,
+   "lang": "ja",
+   "entry_id": "N002",
+   "expected_label": "NON_ASBESTOS"
+  },
+  {
+   "text": "ケイカル板2種 厚12mm",
+   "bbox_pt": [
+    1045.0,
+    239.71,
+    1119.89,
+    248.85
+   ],
+   "kind": "material",
+   "rotated": false,
+   "lang": "ja",
+   "entry_id": "A005",
+   "expected_label": "ASBESTOS"
+  },
+  {
+   "text": "天井:エマルションペイント",
+   "bbox_pt": [
+    446.64,
+    390.71,
+    538.66,
+    400.52
+   ],
+   "kind": "material",
+   "rotated": false,
+   "lang": "ja",
+   "entry_id": "N008",
+   "expected_label": "NON_ASBESTOS"
+  },
+  {
+   "text": "天井：PB 2.0mm",
+   "bbox_pt": [
+    264.68,
+    325.93,
+    274.48,
+    383.06
+   ],
+   "kind": "material",
+   "rotated": true,
+   "lang": "ja",
+   "entry_id": "A015",
+   "expected_label": "NON_ASBESTOS"
+  },
+  {
+   "text": "壁：プラスターボード t=6",
+   "bbox_pt": [
+    136.36,
+    280.96,
+    224.11,
+    290.77
+   ],
+   "kind": "material",
+   "rotated": false,
+   "lang": "ja",
+   "entry_id": "A015",
+   "expected_label": "NON_ASBESTOS"
+  },
+  {
+   "text": "床：タイル張り(ノンアスベスト) 2.0mm",
+   "bbox_pt": [
+    408.42,
+    496.0,
+    543.56,
+    505.8
+   ],
+   "kind": "material",
+   "rotated": false,
+   "lang": "ja",
+   "entry_id": "N005",
+   "expected_label": "NON_ASBESTOS"
+  },
+  {
+   "text": "天井:岩綿吸音板 2.0mm",
+   "bbox_pt": [
+    369.48,
+    348.91,
+    379.28,
+    429.07
+   ],
+   "kind": "material",
+   "rotated": true,
+   "lang": "ja",
+   "entry_id": "A014",
+   "expected_label": "ASBESTOS"
+  },
+  {
+   "text": "特記事項",
+   "bbox_pt": [
+    60.0,
+    590.62,
+    96.0,
+    602.39
+   ],
+   "kind": "title",
+   "rotated": false,
+   "lang": "ja"
+  },
+  {
+   "text": "1. 屋根：石綿含有住宅屋根用化粧スレート t=25",
+   "bbox_pt": [
+    68.0,
+    613.66,
+    238.64,
+    624.12
+   ],
+   "kind": "material",
+   "rotated": false,
+   "lang": "ja",
+   "entry_id": "A010",
+   "expected_label": "ASBESTOS"
+  },
+  {
+   "text": "2. 外壁:パルプセメントボード",
+   "bbox_pt": [
+    68.0,
+    631.66,
+    174.79,
+    642.12
+   ],
+   "kind": "material",
+   "rotated": false,
+   "lang": "ja",
+   "entry_id": "A013",
+   "expected_label": "ASBESTOS"
+  },
+  {
+   "text": "3. 外壁：パルプセメント板 2.0mm",
+   "bbox_pt": [
+    68.0,
+    649.66,
+    191.98,
+    660.12
+   ],
+   "kind": "material",
+   "rotated": false,
+   "lang": "ja",
+   "entry_id": "A013",
+   "expected_label": "ASBESTOS"
+  }
+ ]
+}

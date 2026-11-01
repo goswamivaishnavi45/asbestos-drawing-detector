@@ -1,0 +1,153 @@
+{
+  "n_drawings": 30,
+  "split": {
+    "dev": 15,
+    "test": 15
+  },
+  "ocr": "easyocr",
+  "preprocess": true,
+  "modes": {
+    "vector": {
+      "threshold": 0.6,
+      "dev_threshold_sweep": {
+        "0.6": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 183,
+          "fp": 0,
+          "fn": 0
+        },
+        "0.65": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 183,
+          "fp": 0,
+          "fn": 0
+        },
+        "0.7": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 183,
+          "fp": 0,
+          "fn": 0
+        },
+        "0.75": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 183,
+          "fp": 0,
+          "fn": 0
+        },
+        "0.8": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 183,
+          "fp": 0,
+          "fn": 0
+        },
+        "0.85": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 183,
+          "fp": 0,
+          "fn": 0
+        },
+        "0.9": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 183,
+          "fp": 0,
+          "fn": 0
+        }
+      },
+      "avg_seconds_per_page": 0.1,
+      "dev": {
+        "pages": 15,
+        "detection": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 769,
+          "fp": 0,
+          "fn": 0
+        },
+        "cer": 0.0,
+        "cer_ja": 0.0,
+        "cer_en": 0.0,
+        "wer_en": 0.0,
+        "year_accuracy": 1.0,
+        "materials": 398,
+        "material_detected_rate": 1.0,
+        "material_id_accuracy": 0.9849,
+        "label_accuracy_3class": 1.0,
+        "asbestos_flag": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 183,
+          "fp": 0,
+          "fn": 0
+        },
+        "non_material_false_matches": 20
+      },
+      "test": {
+        "pages": 15,
+        "detection": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 793,
+          "fp": 0,
+          "fn": 0
+        },
+        "cer": 0.0,
+        "cer_ja": 0.0,
+        "cer_en": 0.0,
+        "wer_en": 0.0,
+        "year_accuracy": 1.0,
+        "materials": 409,
+        "material_detected_rate": 1.0,
+        "material_id_accuracy": 0.9878,
+        "label_accuracy_3class": 1.0,
+        "asbestos_flag": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 166,
+          "fp": 0,
+          "fn": 0
+        },
+        "non_material_false_matches": 20
+      },
+      "matcher_ablation_test": {
+        "exact": {
+          "clean_material_id_acc": 0.9609,
+          "ocr_material_id_acc": 0.9609,
+          "ocr_false_match_rate_on_non_materials": 0.0
+        },
+        "fuzzy": {
+          "clean_material_id_acc": 0.9878,
+          "ocr_material_id_acc": 0.9878,
+          "ocr_false_match_rate_on_non_materials": 0.0755
+        },
+        "tfidf": {
+          "clean_material_id_acc": 0.9902,
+          "ocr_material_id_acc": 0.9902,
+          "ocr_false_match_rate_on_non_materials": 0.0
+        },
+        "hybrid": {
+          "clean_material_id_acc": 0.9878,
+          "ocr_material_id_acc": 0.9878,
+          "ocr_false_match_rate_on_non_materials": 0.0521
+        }
+      }
+    }
+  }
+}

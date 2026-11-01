@@ -8,13 +8,13 @@
   "preprocess": true,
   "modes": {
     "vector": {
-      "threshold": 0.6,
+      "threshold": 0.9,
       "dev_threshold_sweep": {
         "0.6": {
           "precision": 1.0,
           "recall": 1.0,
           "f1": 1.0,
-          "tp": 183,
+          "tp": 187,
           "fp": 0,
           "fn": 0
         },
@@ -22,7 +22,7 @@
           "precision": 1.0,
           "recall": 1.0,
           "f1": 1.0,
-          "tp": 183,
+          "tp": 187,
           "fp": 0,
           "fn": 0
         },
@@ -30,7 +30,7 @@
           "precision": 1.0,
           "recall": 1.0,
           "f1": 1.0,
-          "tp": 183,
+          "tp": 187,
           "fp": 0,
           "fn": 0
         },
@@ -38,7 +38,7 @@
           "precision": 1.0,
           "recall": 1.0,
           "f1": 1.0,
-          "tp": 183,
+          "tp": 187,
           "fp": 0,
           "fn": 0
         },
@@ -46,7 +46,7 @@
           "precision": 1.0,
           "recall": 1.0,
           "f1": 1.0,
-          "tp": 183,
+          "tp": 187,
           "fp": 0,
           "fn": 0
         },
@@ -54,7 +54,7 @@
           "precision": 1.0,
           "recall": 1.0,
           "f1": 1.0,
-          "tp": 183,
+          "tp": 187,
           "fp": 0,
           "fn": 0
         },
@@ -62,19 +62,19 @@
           "precision": 1.0,
           "recall": 1.0,
           "f1": 1.0,
-          "tp": 183,
+          "tp": 187,
           "fp": 0,
           "fn": 0
         }
       },
-      "avg_seconds_per_page": 0.1,
+      "avg_seconds_per_page": 0.12,
       "dev": {
         "pages": 15,
         "detection": {
           "precision": 1.0,
           "recall": 1.0,
           "f1": 1.0,
-          "tp": 769,
+          "tp": 786,
           "fp": 0,
           "fn": 0
         },
@@ -83,19 +83,19 @@
         "cer_en": 0.0,
         "wer_en": 0.0,
         "year_accuracy": 1.0,
-        "materials": 398,
-        "material_detected_rate": 1.0,
-        "material_id_accuracy": 0.9849,
-        "label_accuracy_3class": 1.0,
+        "materials": 412,
+        "material_detected_rate": 0.9976,
+        "material_id_accuracy": 0.9951,
+        "label_accuracy_3class": 0.9976,
         "asbestos_flag": {
           "precision": 1.0,
           "recall": 1.0,
           "f1": 1.0,
-          "tp": 183,
+          "tp": 187,
           "fp": 0,
           "fn": 0
         },
-        "non_material_false_matches": 20
+        "non_material_false_matches": 0
       },
       "test": {
         "pages": 15,
@@ -103,7 +103,7 @@
           "precision": 1.0,
           "recall": 1.0,
           "f1": 1.0,
-          "tp": 793,
+          "tp": 782,
           "fp": 0,
           "fn": 0
         },
@@ -112,40 +112,183 @@
         "cer_en": 0.0,
         "wer_en": 0.0,
         "year_accuracy": 1.0,
-        "materials": 409,
+        "materials": 404,
         "material_detected_rate": 1.0,
-        "material_id_accuracy": 0.9878,
+        "material_id_accuracy": 1.0,
         "label_accuracy_3class": 1.0,
         "asbestos_flag": {
           "precision": 1.0,
           "recall": 1.0,
           "f1": 1.0,
-          "tp": 166,
+          "tp": 184,
           "fp": 0,
           "fn": 0
         },
-        "non_material_false_matches": 20
+        "non_material_false_matches": 0
       },
       "matcher_ablation_test": {
         "exact": {
-          "clean_material_id_acc": 0.9609,
-          "ocr_material_id_acc": 0.9609,
+          "clean_material_id_acc": 0.9827,
+          "ocr_material_id_acc": 0.9827,
           "ocr_false_match_rate_on_non_materials": 0.0
         },
         "fuzzy": {
-          "clean_material_id_acc": 0.9878,
-          "ocr_material_id_acc": 0.9878,
-          "ocr_false_match_rate_on_non_materials": 0.0755
+          "clean_material_id_acc": 1.0,
+          "ocr_material_id_acc": 1.0,
+          "ocr_false_match_rate_on_non_materials": 0.0
         },
         "tfidf": {
-          "clean_material_id_acc": 0.9902,
-          "ocr_material_id_acc": 0.9902,
+          "clean_material_id_acc": 1.0,
+          "ocr_material_id_acc": 1.0,
           "ocr_false_match_rate_on_non_materials": 0.0
         },
         "hybrid": {
-          "clean_material_id_acc": 0.9878,
-          "ocr_material_id_acc": 0.9878,
-          "ocr_false_match_rate_on_non_materials": 0.0521
+          "clean_material_id_acc": 1.0,
+          "ocr_material_id_acc": 1.0,
+          "ocr_false_match_rate_on_non_materials": 0.0
+        }
+      }
+    },
+    "scan": {
+      "threshold": 0.6,
+      "dev_threshold_sweep": {
+        "0.6": {
+          "precision": 0.9486,
+          "recall": 0.8877,
+          "f1": 0.9171,
+          "tp": 166,
+          "fp": 9,
+          "fn": 21
+        },
+        "0.65": {
+          "precision": 0.9583,
+          "recall": 0.861,
+          "f1": 0.907,
+          "tp": 161,
+          "fp": 7,
+          "fn": 26
+        },
+        "0.7": {
+          "precision": 0.9814,
+          "recall": 0.8449,
+          "f1": 0.908,
+          "tp": 158,
+          "fp": 3,
+          "fn": 29
+        },
+        "0.75": {
+          "precision": 1.0,
+          "recall": 0.8128,
+          "f1": 0.8968,
+          "tp": 152,
+          "fp": 0,
+          "fn": 35
+        },
+        "0.8": {
+          "precision": 1.0,
+          "recall": 0.7968,
+          "f1": 0.8869,
+          "tp": 149,
+          "fp": 0,
+          "fn": 38
+        },
+        "0.85": {
+          "precision": 1.0,
+          "recall": 0.7647,
+          "f1": 0.8667,
+          "tp": 143,
+          "fp": 0,
+          "fn": 44
+        },
+        "0.9": {
+          "precision": 1.0,
+          "recall": 0.6952,
+          "f1": 0.8202,
+          "tp": 130,
+          "fp": 0,
+          "fn": 57
+        }
+      },
+      "avg_seconds_per_page": 96.92,
+      "deskew_mean_abs_error_deg": 0.0102,
+      "dev": {
+        "pages": 15,
+        "detection": {
+          "precision": 0.9396,
+          "recall": 0.9695,
+          "f1": 0.9543,
+          "tp": 762,
+          "fp": 49,
+          "fn": 24
+        },
+        "cer": 0.1272,
+        "cer_ja": 0.1927,
+        "cer_en": 0.066,
+        "wer_en": 0.6257,
+        "year_accuracy": 0.9333,
+        "materials": 412,
+        "material_detected_rate": 0.966,
+        "material_id_accuracy": 0.9248,
+        "label_accuracy_3class": 0.915,
+        "asbestos_flag": {
+          "precision": 0.9486,
+          "recall": 0.8877,
+          "f1": 0.9171,
+          "tp": 166,
+          "fp": 9,
+          "fn": 21
+        },
+        "non_material_false_matches": 21
+      },
+      "test": {
+        "pages": 15,
+        "detection": {
+          "precision": 0.9669,
+          "recall": 0.9719,
+          "f1": 0.9694,
+          "tp": 760,
+          "fp": 26,
+          "fn": 22
+        },
+        "cer": 0.1503,
+        "cer_ja": 0.1668,
+        "cer_en": 0.0933,
+        "wer_en": 0.586,
+        "year_accuracy": 1.0,
+        "materials": 404,
+        "material_detected_rate": 0.9455,
+        "material_id_accuracy": 0.9257,
+        "label_accuracy_3class": 0.9233,
+        "asbestos_flag": {
+          "precision": 0.9615,
+          "recall": 0.9511,
+          "f1": 0.9563,
+          "tp": 175,
+          "fp": 7,
+          "fn": 9
+        },
+        "non_material_false_matches": 16
+      },
+      "matcher_ablation_test": {
+        "exact": {
+          "clean_material_id_acc": 0.9827,
+          "ocr_material_id_acc": 0.6931,
+          "ocr_false_match_rate_on_non_materials": 0.0
+        },
+        "fuzzy": {
+          "clean_material_id_acc": 1.0,
+          "ocr_material_id_acc": 0.901,
+          "ocr_false_match_rate_on_non_materials": 0.0556
+        },
+        "tfidf": {
+          "clean_material_id_acc": 1.0,
+          "ocr_material_id_acc": 0.8985,
+          "ocr_false_match_rate_on_non_materials": 0.0
+        },
+        "hybrid": {
+          "clean_material_id_acc": 1.0,
+          "ocr_material_id_acc": 0.9257,
+          "ocr_false_match_rate_on_non_materials": 0.0423
         }
       }
     }

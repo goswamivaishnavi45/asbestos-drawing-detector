@@ -44,7 +44,7 @@ def test_bare_header_is_not_a_material():
 
 @pytest.mark.parametrize("text,year", [
     ("竣工: 昭和53年", 1978), ("竣工: 平成元年", 1989), ("竣工年: 1984年", 1984),
-    ("Year built: 1972", 1972), ("完成 S48", 1973), ("日付 2023.04.10", None), ("竣工: 不明", None),
+    ("Year built: 1972", 1972), ("完成 S48", 1973), ("峻工年:1962年", 1962),  # OCR: 峻 for 竣 ("日付 2023.04.10", None), ("竣工: 不明", None),
 ])
 def test_parse_build_year(text, year):
     assert parse_build_year(text) == year
@@ -55,6 +55,9 @@ def test_markers():
     assert asbestos_marker("Non-asbestos VAT") == "non"
     assert asbestos_marker("石綿含有けい酸カルシウム板") == "asbestos"
     assert asbestos_marker("せっこうボード") is None
+    assert asbestos_marker("Asbestos-containing VAT") == "asbestos"  # must not be read as "non-asbestos"
+    assert asbestos_marker("石綿合有仕上塗材") == "asbestos"  # OCR: 合 for 含
+    assert asbestos_marker("アスベスト") is None
 
 
 # --- matching ----------------------------------------------------------------------------

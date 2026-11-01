@@ -1,6 +1,7 @@
 """OCR backends. Each returns TextLine boxes in image pixel coordinates."""
 from __future__ import annotations
 
+import cv2
 import numpy as np
 
 from .geometry import TextLine, iou, offset
@@ -10,6 +11,12 @@ from .preprocess import tiles
 def _quad_to_box(pts) -> tuple[float, float, float, float]:
     xs, ys = [float(p[0]) for p in pts], [float(p[1]) for p in pts]
     return min(xs), min(ys), max(xs), max(ys)
+
+
+def _quad_bounds(pts) -> tuple[int, int, int, int]:
+    """Quad -> EasyOCR horizontal box format [x_min, x_max, y_min, y_max]."""
+    x0, y0, x1, y1 = _quad_to_box(pts)
+    return int(x0), int(x1), int(y0), int(y1)
 
 
 def _dedupe(lines: list[TextLine]) -> list[TextLine]:
@@ -22,7 +29,7 @@ def _dedupe(lines: list[TextLine]) -> list[TextLine]:
 
 
 class OCRBackend:
-    max_side = 2600  # larger sheets are tiled
+    max_side = 3600  # larger sheets are tiled (a 200-dpi A3 sheet fits in one pass)
 
     def _read(self, img: np.ndarray) -> list[TextLine]:
         raise NotImplementedError
@@ -44,11 +51,36 @@ class EasyOCRBackend(OCRBackend):
 
         self.reader = easyocr.Reader(list(langs), gpu=gpu, verbose=False)
 
+    def _recognize(self, img: np.ndarray, boxes: list) -> list[tuple[str, float]]:
+        res = self.reader.recognize(img, horizontal_list=boxes, free_list=[], detail=1, paragraph=False,
+                                    batch_size=32)
+        return [(text, float(conf)) for _, text, conf in res]
+
     def _read(self, img: np.ndarray) -> list[TextLine]:
-        # rotation_info lets the recognizer try 90/270-degree crops, so vertical annotations are read.
-        res = self.reader.readtext(img, detail=1, paragraph=False, rotation_info=[90, 270],
-                                   canvas_size=2600, text_threshold=0.6, low_text=0.35)
-        return [TextLine(text, _quad_to_box(pts), float(conf), "ocr") for pts, text, conf in res if text.strip()]
+        # Detect once (CRAFT), then recognize horizontal boxes in one batch. Tall boxes are
+        # vertical annotations: rotate the crop both ways and keep the more confident read.
+        # (readtext(rotation_info=...) would re-recognize *every* box 3x, ~3x slower on CPU.)
+        horiz, free = self.reader.detect(img, canvas_size=max(img.shape[:2]), mag_ratio=1.0,
+                                         text_threshold=0.6, low_text=0.35, link_threshold=0.4)
+        horiz, free = horiz[0], free[0]
+        flat = [b for b in horiz if (b[3] - b[2]) <= 1.5 * (b[1] - b[0])]
+        flat += [[*_quad_bounds(q)] for q in free]  # slightly skewed quads -> axis-aligned boxes
+        tall = [b for b in horiz if (b[3] - b[2]) > 1.5 * (b[1] - b[0])]
+
+        out = []
+        if flat:
+            for b, (text, conf) in zip(flat, self._recognize(img, flat)):
+                out.append(TextLine(text, tuple(float(v) for v in (b[0], b[2], b[1], b[3])), conf, "ocr"))
+        for x0, x1, y0, y1 in tall:
+            crop = img[max(0, y0):y1, max(0, x0):x1]
+            best = ("", 0.0)
+            for rot in (cv2.ROTATE_90_CLOCKWISE, cv2.ROTATE_90_COUNTERCLOCKWISE):
+                r = cv2.rotate(crop, rot)
+                reads = self._recognize(r, [[0, r.shape[1], 0, r.shape[0]]])
+                if reads and reads[0][1] > best[1]:
+                    best = reads[0]
+            out.append(TextLine(best[0], tuple(float(v) for v in (x0, y0, x1, y1)), best[1], "ocr"))
+        return [l for l in out if l.text.strip()]
 
 
 class PaddleOCRBackend(OCRBackend):

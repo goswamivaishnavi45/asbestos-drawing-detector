@@ -277,13 +277,13 @@ def degrade(gray: np.ndarray, rng: random.Random) -> tuple[np.ndarray, float]:
     img = cv2.warpAffine(gray, m, (w, h), borderValue=255).astype(np.float32)
     img = img * rng.uniform(0.75, 0.95) + rng.uniform(15, 45)  # faded toner, grey paper
     nrng = np.random.default_rng(rng.randint(0, 2**31))
-    img += nrng.normal(0, rng.uniform(4, 10), img.shape)
+    img += nrng.normal(0, rng.uniform(3, 8), img.shape)
     speck = nrng.random(img.shape) < 0.0006
     img[speck] = 40
     img = np.clip(img, 0, 255).astype(np.uint8)
     if rng.random() < 0.5:
         img = cv2.GaussianBlur(img, (3, 3), 0)
-    ok, enc = cv2.imencode(".jpg", img, [cv2.IMWRITE_JPEG_QUALITY, rng.randint(35, 75)])
+    ok, enc = cv2.imencode(".jpg", img, [cv2.IMWRITE_JPEG_QUALITY, rng.randint(50, 85)])
     return cv2.imdecode(enc, cv2.IMREAD_GRAYSCALE), angle
 
 
@@ -304,7 +304,7 @@ def main():
         sheet.build(n_annotations=rng.randint(3, 6))
         sid = f"drawing_{i:03d}"
         sheet.doc.save(out / f"{sid}.pdf")
-        dpi = rng.choice([130, 150, 180])
+        dpi = rng.choice([180, 200, 220])
         pix = sheet.page.get_pixmap(dpi=dpi, colorspace=pymupdf.csGRAY)
         clean = np.frombuffer(pix.samples, dtype=np.uint8).reshape(pix.height, pix.width)
         scan, angle = degrade(clean, rng)

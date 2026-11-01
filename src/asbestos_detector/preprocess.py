@@ -12,28 +12,29 @@ def to_gray(img: np.ndarray) -> np.ndarray:
 
 
 def estimate_skew(gray: np.ndarray, max_angle: float = 10.0) -> float:
-    """Skew angle in degrees, estimated from the long straight lines every drawing has (borders, walls, tables)."""
-    edges = cv2.Canny(gray, 50, 150)
-    min_len = max(gray.shape) // 10
-    lines = cv2.HoughLinesP(edges, 1, np.pi / 1800, threshold=150, minLineLength=min_len, maxLineGap=5)
-    if lines is None:
-        return 0.0
+    """Skew angle in degrees: Hough lines on the long straight strokes every drawing has (borders, walls,
+    tables) give a coarse estimate; a projection-profile search refines it."""
+    # Work on a downscaled Otsu-binarized copy: scan noise fragments Canny edges at full resolution.
+    scale = 1200 / max(gray.shape)
+    small = cv2.resize(gray, None, fx=scale, fy=scale, interpolation=cv2.INTER_AREA)
+    ink = cv2.threshold(cv2.GaussianBlur(small, (3, 3), 0), 0, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)[1]
+    lines = cv2.HoughLinesP(ink, 1, np.pi / 1800, threshold=100, minLineLength=max(ink.shape) // 8, maxLineGap=10)
     angles = []
-    for x0, y0, x1, y1 in lines.reshape(-1, 4):  # OpenCV 4 returns (N,1,4), OpenCV 5 (N,4)
+    for x0, y0, x1, y1 in (lines.reshape(-1, 4) if lines is not None else []):  # OpenCV 4: (N,1,4), 5: (N,4)
         a = math.degrees(math.atan2(y1 - y0, x1 - x0))
         if abs(a) < max_angle:
             angles.append(a)
         elif abs(abs(a) - 90) < max_angle:  # near-vertical line
             angles.append(a - 90 if a > 0 else a + 90)
-    coarse = float(np.median(angles)) if angles else 0.0
-    return _refine_skew(gray, coarse)
+    if len(angles) >= 3:
+        coarse = _refine_skew(ink, float(np.median(angles)), span=1.0, step=0.1)
+    else:  # too few lines to trust: search the whole plausible range
+        coarse = _refine_skew(ink, 0.0, span=3.0, step=0.1)
+    return _refine_skew(ink, coarse, span=0.12, step=0.01)
 
 
-def _refine_skew(gray: np.ndarray, coarse: float, span: float = 0.6, step: float = 0.02) -> float:
-    """Projection-profile search around the Hough estimate: the right angle makes ink rows sharpest."""
-    scale = 1200 / max(gray.shape)
-    small = cv2.resize(gray, None, fx=scale, fy=scale, interpolation=cv2.INTER_AREA)
-    ink = cv2.threshold(small, 0, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)[1]
+def _refine_skew(ink: np.ndarray, coarse: float, span: float, step: float) -> float:
+    """Projection-profile search around an estimate: the right angle makes ink rows sharpest."""
     h, w = ink.shape
     best, best_score = coarse, -1.0
     for a in np.arange(coarse - span, coarse + span + 1e-9, step):

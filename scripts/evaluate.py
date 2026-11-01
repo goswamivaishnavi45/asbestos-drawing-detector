@@ -30,6 +30,7 @@ from asbestos_detector.matcher import METHODS, MaterialMatcher  # noqa: E402
 from asbestos_detector.metrics import cer, match_boxes, prf, wer  # noqa: E402
 from asbestos_detector.normalize import parse_annotation  # noqa: E402
 from asbestos_detector.pipeline import Analyzer, find_build_year  # noqa: E402
+from asbestos_detector.preprocess import preprocess  # noqa: E402
 from asbestos_detector.rules import ASBESTOS, REVIEW  # noqa: E402
 from asbestos_detector.visualize import annotate  # noqa: E402
 
@@ -43,18 +44,18 @@ def read_cached(analyzer: Analyzer, gt: dict, data: Path, mode: str, cache_dir: 
     cache = cache_dir / f"{gt['id']}_{mode}_{tag}.json"
     if cache.exists():
         c = json.loads(cache.read_text(encoding="utf-8"))
-        return [TextLine(l["text"], tuple(l["bbox"]), l["conf"], l["source"]) for l in c["lines"]], c["cells"], c["angle"], c["seconds"], None
+        return [TextLine(l["text"], tuple(l["bbox"]), l["conf"], l["source"]) for l in c["lines"]], c["cells"], c["angle"], c["seconds"]
     if mode == "vector":
         page = load_pages(data / f"{gt['id']}.pdf", dpi=150)[0]
     else:
         page = load_pages(data / f"{gt['id']}_scan.png", dpi=gt["scan_dpi"])[0]
     t0 = time.time()
-    lines, img, angle, tables, _ = analyzer.read_page_lines(page, force_ocr=(mode == "scan"))
+    lines, _, angle, tables, _ = analyzer.read_page_lines(page, force_ocr=(mode == "scan"))
     secs = time.time() - t0
     cells = [list(c) for t in tables for c in t.cells]
     cache.write_text(json.dumps({"lines": [l.__dict__ for l in lines], "cells": cells, "angle": angle, "seconds": secs},
                                 ensure_ascii=False), encoding="utf-8")
-    return lines, cells, angle, secs, img
+    return lines, cells, angle, secs
 
 
 def gt_boxes(gt: dict, mode: str) -> list[tuple]:
@@ -126,6 +127,21 @@ def matcher_ablation(gt, lines, matchers, mode) -> Counter:
     return c
 
 
+def save_example(analyzer: Analyzer, gt: dict, data: Path, mode: str, read: dict, tag: str) -> None:
+    """Annotated image of one test drawing with the final threshold (re-runs preprocessing only, not OCR)."""
+    lines, cells = read[gt["id"]]
+    if mode == "vector":
+        img = load_pages(data / f"{gt['id']}.pdf", dpi=150)[0].image
+    else:
+        page = load_pages(data / f"{gt['id']}_scan.png", dpi=gt["scan_dpi"])[0]
+        img, _ = preprocess(page.image, analyzer.deskew, analyzer.denoise)
+    items = analyzer.classify_lines(lines, find_build_year(lines), 0, [tuple(x) for x in cells])
+    vis = annotate(img, items)
+    scale = 1600 / vis.shape[1]
+    vis = cv2.resize(vis, None, fx=scale, fy=scale, interpolation=cv2.INTER_AREA)
+    cv2.imencode(".png", vis)[1].tofile(str(ROOT / "docs" / f"example_{mode}_{tag}.png"))
+
+
 def summarize(c: Counter) -> dict:
     r = lambda a, b: round(c[a] / c[b], 4) if c[b] else None
     return {
@@ -170,19 +186,12 @@ def main():
         read = {}
         secs, skew_err = [], []
         for i, gt in enumerate(gts):
-            lines, cells, angle, s, img = read_cached(analyzer, gt, data, mode, out / "cache", tag)
+            lines, cells, angle, s = read_cached(analyzer, gt, data, mode, out / "cache", tag)
             read[gt["id"]] = (lines, cells)
             secs.append(s)
             if mode == "scan" and not args.no_preprocess:
                 skew_err.append(abs(angle + gt["scan_skew_deg"]))  # correction should cancel the applied skew
             print(f"  {gt['id']}: {len(lines)} lines, skew {angle:+.2f} (true {gt['scan_skew_deg'] if mode == 'scan' else 0:+.2f}), {s:.1f}s")
-            if gt is splits["test"][0] and img is not None:
-                year = find_build_year(lines)
-                items = analyzer.classify_lines(lines, year, 0, [tuple(x) for x in cells])
-                vis = annotate(img, items)
-                scale = 1600 / vis.shape[1]
-                vis = cv2.resize(vis, None, fx=scale, fy=scale, interpolation=cv2.INTER_AREA)
-                cv2.imencode(".png", vis)[1].tofile(str(ROOT / "docs" / f"example_{mode}_{tag}.png"))
 
         # pick the threshold on dev by asbestos-flag F1 (ties -> higher recall, then the stricter threshold)
         sweep = {}
@@ -192,6 +201,7 @@ def main():
             sweep[t] = summarize(c)["asbestos_flag"]
         best_t = max(THRESHOLDS, key=lambda t: (sweep[t]["f1"], sweep[t]["recall"], t))
         analyzer.matcher.threshold = best_t
+        save_example(analyzer, splits["test"][0], data, mode, read, tag)
 
         mode_res = {"threshold": best_t, "dev_threshold_sweep": sweep, "avg_seconds_per_page": round(sum(secs) / len(secs), 2)}
         if skew_err:

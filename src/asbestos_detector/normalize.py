@@ -27,9 +27,13 @@ _SPEC_RE = re.compile(
 NON_ASBESTOS_MARKERS = ("ノンアスベスト", "ノンアス", "無石綿", "非石綿", "nonasbestos", "asbestosfree")
 ASBESTOS_MARKERS = ("石綿含有", "アスベスト含有", "asbestoscontaining", "containsasbestos")
 
+# Look-alike kanji that Japanese OCR confuses in safety-critical words (observed on degraded scans).
+# Fixed explicitly rather than fuzzily: a fuzzy marker check once read "asbestos-containing" as "non-asbestos".
+OCR_CONFUSIONS = {"合有": "含有", "石錦": "石綿", "石棉": "石綿"}
+
 # Marker phrases are removed before matching so "Non-asbestos VAT" is looked up as "VAT".
 _MARKER_RE = re.compile(
-    r"[(（]?\s*(ノンアスベスト|ノンアス|無石綿|非石綿|石綿含有|アスベスト含有|"
+    r"[(（]?\s*(ノンアスベスト|ノンアス|無石綿|非石綿|石綿[含合]有|アスベスト[含合]有|"
     r"non[\s-]?asbestos|asbestos[\s-]?free|asbestos[\s-]?containing|contains asbestos)\s*[)）]?",
     re.IGNORECASE,
 )
@@ -49,6 +53,8 @@ def normalize_key(text: str) -> str:
     """Canonical form used for matching: NFKC, lowercase, katakana, no punctuation/spaces."""
     t = hira_to_kata(nfkc(text)).lower()
     t = t.replace("ｰ", "ー")
+    for wrong, right in OCR_CONFUSIONS.items():
+        t = t.replace(wrong, right)
     return _STRIP_RE.sub("", t)
 
 
@@ -89,7 +95,8 @@ def asbestos_marker(text: str) -> str | None:
 
 _ERA_BASE = {"明治": 1867, "大正": 1911, "昭和": 1925, "平成": 1988, "令和": 2018,
              "m": 1867, "t": 1911, "s": 1925, "h": 1988, "r": 2018}
-_YEAR_KEYWORDS = r"(?:竣工|新築|建築年|建設年|完成|築|completed|completion|built|year built|construction year|constructed)"
+# 竣 is often OCR'd as the look-alikes 峻 / 瑛 / 俊 on degraded scans.
+_YEAR_KEYWORDS = r"(?:[竣峻瑛俊]工|新築|建築年|建設年|完成|築|completed|completion|built|year built|construction year|constructed)"
 _ERA_RE = re.compile(r"(明治|大正|昭和|平成|令和)\s*(\d{1,2}|元)\s*年")
 _KW_ERA_RE = re.compile(_YEAR_KEYWORDS + r"[^0-9a-z]{0,8}([mtshr])\s*(\d{1,2})\b", re.IGNORECASE)
 _KW_YEAR_RE = re.compile(_YEAR_KEYWORDS + r"[^0-9]{0,15}((?:18|19|20)\d{2})", re.IGNORECASE)
